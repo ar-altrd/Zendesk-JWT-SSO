@@ -1,0 +1,27 @@
+<?
+
+$brand_URLs = array(
+
+	"talocrafts.zendesk.com" => "https://page1.example.com/yourcustomloginjwtscript.php",
+
+	"support1.example.com" => "https://page1.example.com/yourcustomloginjwtscript.php",
+
+	"altrd.zendesk.com" => "https://page2.example.com/yourcustomloginjwtscript2.php",
+
+	"support2.example.com" => "https://page2.example.com/yourcustomloginjwtscript2.php"
+
+	);
+
+foreach($brand_URLs as $k => $v){
+
+	if(strpos($_GET['return_to'],$k)){
+
+		header("Location: ". $v);
+
+		die();
+
+	}
+
+}
+
+?>
